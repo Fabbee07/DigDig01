@@ -297,8 +297,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1762079880}
   projectileSpeed: 10
-  projectileLifeTime: 10
-  firerate: 0.2
+  projectileLifeTime: 5
+  firerate: 5
   nextShotTime: 0
 --- !u!114 &212177515
 MonoBehaviour:
