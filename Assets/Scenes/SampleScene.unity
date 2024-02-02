@@ -137,7 +137,9 @@ GameObject:
   - component: {fileID: 212177508}
   - component: {fileID: 212177513}
   - component: {fileID: 212177512}
-  m_Layer: 0
+  - component: {fileID: 212177515}
+  - component: {fileID: 212177514}
+  m_Layer: 3
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +161,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1762079880}
   projectileSpeed: 10
   projectileLifeTime: 3
-  firerate: 1
+  firerate: 0.2
   nextShotTime: 0
 --- !u!114 &212177509
 MonoBehaviour:
@@ -267,7 +269,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &212177513
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -313,6 +315,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &212177514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212177507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b728d7cc7e717549ad4e0d8aad8ba21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 1762079880}
+  projectileSpeed: 10
+  projectileLifeTime: 3
+  firerate: 0.2
+  nextShotTime: 0
+--- !u!114 &212177515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212177507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd2f31e9dc738cd449536be09206ac0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,7 +494,7 @@ GameObject:
   - component: {fileID: 1762079881}
   - component: {fileID: 1762079883}
   - component: {fileID: 1762079884}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
