@@ -34,7 +34,7 @@ public class PlayerShooting : MonoBehaviour
         // Get the projectile's Rigidbody2D component and set its velocity
         Rigidbody2D projectileRb = projectile.GetComponent<Rigidbody2D>();
         projectileRb.velocity = direction * projectileSpeed;
-
+       
         Destroy(projectile, projectileLifeTime);
     }
 }
