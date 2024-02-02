@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 212177511}
   - component: {fileID: 212177510}
   - component: {fileID: 212177509}
+  - component: {fileID: 212177508}
   - component: {fileID: 212177513}
   - component: {fileID: 212177512}
   m_Layer: 3
@@ -143,6 +144,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &212177508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212177507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b728d7cc7e717549ad4e0d8aad8ba21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 1762079880}
+  projectileSpeed: 10
+  projectileLifeTime: 3
+  firerate: 5
+  nextShotTime: 0
 --- !u!114 &212177509
 MonoBehaviour:
   m_ObjectHideFlags: 0
