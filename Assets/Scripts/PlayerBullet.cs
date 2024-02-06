@@ -5,6 +5,7 @@ public class PlayerBullet : MonoBehaviour
     public float projectileSpeed = 10f;  // Speed of the projectile
     public int damage = 10;              // Damage dealt to enemies
     public float lifetime = 3f;          // Lifetime of the projectile
+    
 
     GameObject EnemyHealth;
 
