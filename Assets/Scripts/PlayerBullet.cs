@@ -6,6 +6,8 @@ public class PlayerBullet : MonoBehaviour
     public int damage = 10;              // Damage dealt to enemies
     public float lifetime = 3f;          // Lifetime of the projectile
 
+    GameObject EnemyHealth;
+
     void Start()
     {
         // Set the projectile's lifetime
@@ -24,7 +26,7 @@ public class PlayerBullet : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             // Deal damage to the enemy
-            EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
+            EnemyHealth enemyHealth = other.GetComponent<enemyHealth>();
             if (enemyHealth != null)
             {
                 enemyHealth.TakeDamage(damage);
