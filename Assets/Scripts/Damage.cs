@@ -2,11 +2,11 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Damage : MonoBehaviour
 {
     public PlayerHealth playerHealth;
     public int damage = 2;
-    public GameObject[] hearts;
+    //public GameObject[] hearts;
     private int health;
 
     public int Health { get => health; set => health = value; }
@@ -26,6 +26,7 @@ public class NewBehaviourScript : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("damage");
             playerHealth.TakeDamage(damage);
         }
     }

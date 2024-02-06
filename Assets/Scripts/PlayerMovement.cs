@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f; // Speed at which the object moves
-
+    public Rigidbody2D rb = null;
     void Update()
     {
         // Get input from arrow keys (or WASD keys)
@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movement = new Vector3(horizontalInput, verticalInput, 0f) * moveSpeed * Time.deltaTime;
 
         // Get the current position of the player
-        Vector3 currentPosition = transform.position;
+        Vector3 currentPosition = rb.position;
 
         // Calculate the position after movement
         Vector3 newPosition = currentPosition + movement;
@@ -30,6 +30,6 @@ public class PlayerMovement : MonoBehaviour
         newPosition = Camera.main.ViewportToWorldPoint(viewportPosition);
 
         // Apply the movement within the camera bounds
-        transform.position = newPosition;
+       rb.position = newPosition;
     }
 }
