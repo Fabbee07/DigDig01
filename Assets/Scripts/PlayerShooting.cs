@@ -27,6 +27,11 @@ public class PlayerShooting : MonoBehaviour
 
         // Calculate the direction from the enemy (player's position) to the mouse position
         Vector3 direction = (mousePosition - transform.position).normalized;
+        mousePosition = new Vector3(mousePosition.x, mousePosition.y, transform.position.z);
+
+        // Calculate the direction from the enemy (player's position) to the mouse position
+        Vector3 direction = (mousePosition - transform.position).normalized;
+        direction.Normalize();
 
         // Instantiate the projectile at the player's position
         GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
@@ -37,4 +42,5 @@ public class PlayerShooting : MonoBehaviour
 
         Destroy(projectile, projectileLifeTime);
     }
+
 }
