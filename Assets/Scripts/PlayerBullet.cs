@@ -9,6 +9,8 @@ public class PlayerBullet : MonoBehaviour
 
     GameObject EnemyHealth;
 
+    GameObject EnemyHealth;
+
     void Start()
     {
         // Set the projectile's lifetime
