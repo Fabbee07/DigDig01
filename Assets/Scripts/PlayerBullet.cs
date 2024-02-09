@@ -7,6 +7,7 @@ public class PlayerBullet : MonoBehaviour
     public int damage = 10;              // Damage dealt to enemies
     public float lifetime = 3f;          // Lifetime of the projectile
     public Rigidbody2D rb = null;
+
     void Start()
     {
         // Set the projectile's lifetime
@@ -16,7 +17,7 @@ public class PlayerBullet : MonoBehaviour
     void FixedUpdate()
     {
         // Move the projectile forward
-       rb.transform.position = rb.transform.position + Vector3.right * projectileSpeed *Time.deltaTime;
+       //rb.transform.position += Vector3.right * projectileSpeed * Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
