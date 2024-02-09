@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public PlayerHealth playerHealth;
+    public Health playerHealth;
     public int damage = 2;
     public GameObject[] hearts;
     private int health;
@@ -22,4 +22,4 @@ public class NewBehaviourScript : MonoBehaviour
 
     }
 
-    public 
+}

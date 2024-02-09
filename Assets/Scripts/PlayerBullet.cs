@@ -27,7 +27,7 @@ public class PlayerBullet : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             // Deal damage to the enemy
-            EnemyHealth enemyHealth = other.GetComponent<enemyHealth>();
+            EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
             if (enemyHealth != null)
             {
                 enemyHealth.TakeDamage(damage);
