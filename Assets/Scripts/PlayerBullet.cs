@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
@@ -6,7 +5,9 @@ public class PlayerBullet : MonoBehaviour
     public float projectileSpeed = 10f;  // Speed of the projectile
     public int damage = 10;              // Damage dealt to enemies
     public float lifetime = 3f;          // Lifetime of the projectile
-    public Rigidbody2D rb = null;
+    
+
+    GameObject EnemyHealth;
 
     void Start()
     {
@@ -14,20 +15,19 @@ public class PlayerBullet : MonoBehaviour
         Destroy(gameObject, lifetime);
     }
 
-    void FixedUpdate()
+    void Update()
     {
         // Move the projectile forward
-       //rb.transform.position += Vector3.right * projectileSpeed * Time.deltaTime;
+        transform.Translate(Vector2.right * projectileSpeed * Time.deltaTime);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(collision.gameObject.name);
         // Check if the collided object has the "Enemy" tag
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy"))
         {
             // Deal damage to the enemy
-            EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
+            EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
             if (enemyHealth != null)
             {
                 enemyHealth.TakeDamage(damage);
