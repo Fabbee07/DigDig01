@@ -45,7 +45,7 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0)
         {
             dead = true;
-            Destroy(gameObject);
+            
             Destroy(hearts[0].gameObject);
 
         }
