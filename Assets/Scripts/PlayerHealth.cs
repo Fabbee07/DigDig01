@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 
@@ -33,7 +29,7 @@ public class PlayerHealth : MonoBehaviour
         }
         else if (health < 3)
         {
-            Destroy(hearts[3].gameObject);
+            Destroy(hearts[2].gameObject);
         }
         {
             if (dead == true)
@@ -49,6 +45,8 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0)
         {
             dead = true;
+            Destroy(gameObject);
+            Destroy(hearts[0].gameObject);
 
         }
     }
