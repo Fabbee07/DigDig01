@@ -3,12 +3,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     // Configurable parameters
-    [SerializeField] float moveSpeed = 5f; // Speed at which the object moves
+    [SerializeField] float moveSpeed = 5.0f; // Speed at which the object moves
 
     // Private variables
-    float horizontalInput;
-    float verticalInput;
-    Vector3 newPosition;
+    Vector2 movementInput;
+    Vector2 runVelocity;
+    bool playerHasSpeed;
 
     // Cached references
     Rigidbody2D myRigidbody;
@@ -33,32 +33,27 @@ public class PlayerMovement : MonoBehaviour
     void CheckInput()
     {
         // Get input from arrow keys (or WASD keys)
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
+        movementInput.x = Input.GetAxisRaw("Horizontal"); // Can be changed to GetAxisRaw for snappier movement
+        movementInput.y = Input.GetAxisRaw("Vertical");
     }
 
     void Movement()
     {
-        // Calculate the movement direction
-        Vector3 movement = new Vector3(horizontalInput, verticalInput, 0f) * moveSpeed;
+        // This makes the player move 
+        runVelocity = new Vector2(movementInput.x * moveSpeed, movementInput.y * moveSpeed);
+        myRigidbody.velocity = runVelocity;
 
-        // Get the current position of the player
-        Vector3 currentPosition = myRigidbody.position;
+        // This plays the movement animation
 
-        // Calculate the position after movement
-        newPosition = currentPosition + movement;
+        if (Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon || Mathf.Abs(myRigidbody.velocity.y) > Mathf.Epsilon) 
+        { 
+            playerHasSpeed = true;
+        }
+        else
+        {
+            playerHasSpeed = false;
+        }
 
-        // Get the viewport position of the calculated position
-        Vector3 viewportPosition = Camera.main.WorldToViewportPoint(newPosition);
-
-        // Restrict the player's position within the camera's viewport
-        viewportPosition.x = Mathf.Clamp01(viewportPosition.x);
-        viewportPosition.y = Mathf.Clamp01(viewportPosition.y);
-
-        // Convert the clamped viewport position back to world space
-        newPosition = Camera.main.ViewportToWorldPoint(viewportPosition);
-
-        // Apply the movement within the camera bounds
-        myRigidbody.position = newPosition;
+        myAnimator.SetBool("isWalking", playerHasSpeed);
     }
 }

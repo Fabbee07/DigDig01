@@ -97,7 +97,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4026687307186745578}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -186,7 +186,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23eb3791ac7290d48a4393a03a9c4369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 3720247876900744095, guid: bf6fbd058438db046a098b1bd9ee468f, type: 3}
   damage: 1
 --- !u!114 &2495052923068369654
 MonoBehaviour:
@@ -200,5 +199,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 707ae7a40fdb3d844a3a2fede4ab92ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 3808531614097521302, guid: bf6fbd058438db046a098b1bd9ee468f, type: 3}
   speed: 1

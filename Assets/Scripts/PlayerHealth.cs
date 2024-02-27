@@ -42,12 +42,12 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int d)
     {
         health -= d;
+
         if (health <= 0)
         {
             dead = true;
             
             Destroy(hearts[0].gameObject);
-
         }
     }
 }

@@ -406,9 +406,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23eb3791ac7290d48a4393a03a9c4369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 212177517}
+  playerHealth: {fileID: 0}
   damage: 2
-  hearts: []
 --- !u!212 &592576946
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -716,7 +715,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 617878727}
-  m_Father: {fileID: 376160247}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -898,7 +897,7 @@ SpriteRenderer:
   m_Size: {x: 2.65, y: 2.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1162103196
@@ -982,7 +981,7 @@ SpriteRenderer:
   m_Size: {x: 2.65, y: 2.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1646750411
@@ -1016,6 +1015,7 @@ Transform:
   m_Children:
   - {fileID: 1162103197}
   - {fileID: 787677793}
+  - {fileID: 1982373638}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1887125099
@@ -1199,6 +1199,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3720247876900744095, guid: bf6fbd058438db046a098b1bd9ee468f, type: 3}
+      propertyPath: health
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3720247876900744095, guid: bf6fbd058438db046a098b1bd9ee468f, type: 3}
       propertyPath: hearts.Array.data[0]
       value: 
       objectReference: {fileID: 1162103196}
@@ -1344,3 +1348,5 @@ SceneRoots:
   - {fileID: 396629074}
   - {fileID: 517236617}
   - {fileID: 1887125099}
+  - {fileID: 592576947}
+  - {fileID: 700727630}
