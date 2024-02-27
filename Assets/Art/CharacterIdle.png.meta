@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1acec92dd9bad614abf006335891dc33
+guid: 9ad586671b056e54e8e35cb40bf9d252
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DigDigCharacterWalk_0
+      name: CharacterIdle_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 1538
-        width: 477
-        height: 477
+        x: 0
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcbd43d7db5bae148865b0bbdcf9edc1
-      internalID: -1857786981
+      spriteID: 61d429968fe406e40a03502035f807bb
+      internalID: -330503707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DigDigCharacterWalk_1
+      name: CharacterIdle_1
       rect:
         serializedVersion: 2
-        x: 626
-        y: 1538
-        width: 477
-        height: 477
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c53a8c14f30d80e4bb0b70827c67725d
-      internalID: 1113558811
+      spriteID: f64e5376ede7cf6459a08db7bec8b2db
+      internalID: -813687625
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DigDigCharacterWalk_2
+      name: CharacterIdle_2
       rect:
         serializedVersion: 2
-        x: 1234
-        y: 1538
-        width: 477
-        height: 477
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d3825361aef0d84c9811d6508e68958
-      internalID: 1527196323
+      spriteID: d5b9cf1d261398f4ea84e88cc994c89d
+      internalID: 1413495009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DigDigCharacterWalk_3
+      name: CharacterIdle_3
       rect:
         serializedVersion: 2
-        x: 18
-        y: 322
-        width: 477
-        height: 458
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b02884c0d21861f41bf9d707f16c7eca
-      internalID: -341639152
+      spriteID: d30f210c2f8137046b9f5269bac2ff2a
+      internalID: 582275246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DigDigCharacterWalk_4
+      name: CharacterIdle_4
       rect:
         serializedVersion: 2
-        x: 626
-        y: 322
-        width: 477
-        height: 458
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74a7c1f8a1d414f40a5d40d034ca98c7
-      internalID: 1705194634
+      spriteID: 90e1e98d2210a4d408f986f7201eb804
+      internalID: -756574867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DigDigCharacterWalk_5
+      name: CharacterIdle_5
       rect:
         serializedVersion: 2
-        x: 1234
-        y: 322
-        width: 477
-        height: 458
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81341b9ec0a5c3545a707b8859b01510
-      internalID: 1280187672
+      spriteID: a37b9001a28bef44bafa7cde19ded096
+      internalID: 1485405222
       vertices: []
       indices: 
       edges: []
@@ -246,12 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DigDigCharacterWalk_0: -1857786981
-      DigDigCharacterWalk_1: 1113558811
-      DigDigCharacterWalk_2: 1527196323
-      DigDigCharacterWalk_3: -341639152
-      DigDigCharacterWalk_4: 1705194634
-      DigDigCharacterWalk_5: 1280187672
+      CharacterIdle_0: -330503707
+      CharacterIdle_1: -813687625
+      CharacterIdle_2: 1413495009
+      CharacterIdle_3: 582275246
+      CharacterIdle_4: -756574867
+      CharacterIdle_5: 1485405222
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

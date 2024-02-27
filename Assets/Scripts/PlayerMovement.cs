@@ -2,22 +2,51 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f; // Speed at which the object moves
-    public Rigidbody2D rb = null;
+    // Configurable parameters
+    [SerializeField] float moveSpeed = 5f; // Speed at which the object moves
+
+    // Private variables
+    float horizontalInput;
+    float verticalInput;
+    Vector3 newPosition;
+
+    // Cached references
+    Rigidbody2D myRigidbody;
+    Animator myAnimator;
+
+    void Awake()
+    {
+        myRigidbody = GetComponent<Rigidbody2D>();
+        myAnimator = GetComponentInChildren<Animator>();
+    }
+
     void Update()
     {
-        // Get input from arrow keys (or WASD keys)
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        CheckInput();
+    }
 
+    void FixedUpdate()
+    {
+        Movement();
+    }
+
+    void CheckInput()
+    {
+        // Get input from arrow keys (or WASD keys)
+        horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
+    }
+
+    void Movement()
+    {
         // Calculate the movement direction
-        Vector3 movement = new Vector3(horizontalInput, verticalInput, 0f) * moveSpeed * Time.deltaTime;
+        Vector3 movement = new Vector3(horizontalInput, verticalInput, 0f) * moveSpeed;
 
         // Get the current position of the player
-        Vector3 currentPosition = rb.position;
+        Vector3 currentPosition = myRigidbody.position;
 
         // Calculate the position after movement
-        Vector3 newPosition = currentPosition + movement;
+        newPosition = currentPosition + movement;
 
         // Get the viewport position of the calculated position
         Vector3 viewportPosition = Camera.main.WorldToViewportPoint(newPosition);
@@ -30,6 +59,6 @@ public class PlayerMovement : MonoBehaviour
         newPosition = Camera.main.ViewportToWorldPoint(viewportPosition);
 
         // Apply the movement within the camera bounds
-       rb.position = newPosition;
+        myRigidbody.position = newPosition;
     }
 }
