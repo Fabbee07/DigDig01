@@ -404,7 +404,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 700727630}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -518,7 +518,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 700727630}
+  - component: {fileID:0}
   - component: {fileID: 700727633}
   - component: {fileID: 700727632}
   - component: {fileID: 700727631}
@@ -842,7 +842,7 @@ Transform:
   m_Children:
   - {fileID: 1162103197}
   - {fileID: 787677793}
-  - {fileID: 1982373638}
+  - {fileID: 0}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1887125099
@@ -941,7 +941,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1982373638}
+  - component: {fileID: 0}
   - component: {fileID: 1982373639}
   m_Layer: 0
   m_Name: Heart
@@ -950,7 +950,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1982373638
+--- !u!4 &0
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1175,4 +1175,4 @@ SceneRoots:
   - {fileID: 396629074}
   - {fileID: 517236617}
   - {fileID: 1887125099}
-  - {fileID: 700727630}
+  - {fileID:0}
