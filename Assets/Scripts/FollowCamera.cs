@@ -19,6 +19,8 @@ public class FollowCamera : MonoBehaviour
 
     void LateUpdate()
     {
+        if (targetToFollow == null) { return; }
+
         Vector3 targetPosition = new Vector3(
             targetToFollow.position.x,
             targetToFollow.position.y,

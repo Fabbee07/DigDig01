@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
     private bool dead;
-
+    
     private void Start()
     {
         health = hearts.Length;

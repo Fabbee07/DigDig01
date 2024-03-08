@@ -5,12 +5,24 @@ public class PlayerBullet : MonoBehaviour
     public float projectileSpeed = 10f;  // Speed of the projectile
     public int damage = 10;              // Damage dealt to enemies
     public float lifetime = 3f;          // Lifetime of the projectile
-    public Rigidbody2D rb = null;
+    
+    // Cached references
+    Rigidbody2D myRigidbody;
+
+    private void Awake()
+    {
+        myRigidbody = GetComponent<Rigidbody2D>();  
+    }
 
     void Start()
     {
         // Set the projectile's lifetime
         Destroy(gameObject, lifetime);
+    }
+
+    private void Update()
+    {
+        transform.right = myRigidbody.velocity;
     }
 
     void FixedUpdate()
