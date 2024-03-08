@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         movementInput.y = Input.GetAxisRaw("Vertical");
     }
 
+
     void Movement()
     {
         // This makes the player move 
@@ -44,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody.velocity = runVelocity;
 
         // This plays the movement animation
-
         if (Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon || Mathf.Abs(myRigidbody.velocity.y) > Mathf.Epsilon) 
         { 
             playerHasSpeed = true;
@@ -55,5 +55,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         myAnimator.SetBool("isWalking", playerHasSpeed);
+
+
     }
 }

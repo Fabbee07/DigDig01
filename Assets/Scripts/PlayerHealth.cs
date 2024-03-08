@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
     private bool dead;
-
+    
     private void Start()
     {
         health = hearts.Length;
@@ -31,12 +31,6 @@ public class PlayerHealth : MonoBehaviour
         {
             Destroy(hearts[2].gameObject);
         }
-        {
-            if (dead == true)
-            {
-                Debug.Log("YOU DEDDDD!!!");
-            }
-        }
     }
 
     public void TakeDamage(int d)
@@ -48,6 +42,9 @@ public class PlayerHealth : MonoBehaviour
             dead = true;
             
             Destroy(hearts[0].gameObject);
+
+            // TODO add death animation, maybe sounds and effects?
+            Destroy(gameObject);
         }
     }
 }
