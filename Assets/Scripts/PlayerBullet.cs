@@ -6,6 +6,14 @@ public class PlayerBullet : MonoBehaviour
     public int damage = 10;              // Damage dealt to enemies
     public float lifetime = 3f;          // Lifetime of the projectile
     public Rigidbody2D rb = null;
+    
+    // Cached references
+    Rigidbody2D myRigidbody;
+
+    private void Awake()
+    {
+        myRigidbody = GetComponent<Rigidbody2D>();  
+    }
 
     void Start()
     {
@@ -13,6 +21,12 @@ public class PlayerBullet : MonoBehaviour
         Destroy(gameObject, lifetime);
     }
 
+    private void Update()
+    {
+        transform.right = myRigidbody.velocity;
+    }
+
+    void FixedUpdate()
     void FixedUpdate()
     {
         // Move the projectile forward
@@ -21,6 +35,13 @@ public class PlayerBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Move the projectile forward
+       //rb.transform.position += Vector3.right * projectileSpeed * Time.deltaTime;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.gameObject.name);
         // Check if the collided object has the "Enemy" tag
         if (collision.gameObject.CompareTag("Enemy"))
         {
