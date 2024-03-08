@@ -1219,6 +1219,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3720247876900744095, guid: bf6fbd058438db046a098b1bd9ee468f, type: 3}
+      propertyPath: health
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3720247876900744095, guid: bf6fbd058438db046a098b1bd9ee468f, type: 3}
       propertyPath: hearts.Array.data[0]
       value: 
       objectReference: {fileID: 1162103196}
@@ -1374,5 +1378,8 @@ SceneRoots:
   - {fileID: 2515590659084051812}
   - {fileID: 1646750412}
   - {fileID: 3713507052016987568}
+  - {fileID: 396629074}
+  - {fileID: 517236617}
+  - {fileID: 1887125099}
   - {fileID: 592576947}
   - {fileID: 700727630}
