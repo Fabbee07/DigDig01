@@ -12,8 +12,6 @@ public class PlayerShooting : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && Time.time >= nextShotTime) // Right mouse button
         {
-            Debug.Log("Shoot");
-
             ShootProjectile();
             nextShotTime = Time.time + 1f / firerate;
         }
@@ -24,9 +22,11 @@ public class PlayerShooting : MonoBehaviour
 
         // Get the mouse position in the world space
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition = new Vector3(mousePosition.x, mousePosition.y, transform.position.z);
 
         // Calculate the direction from the enemy (player's position) to the mouse position
         Vector3 direction = (mousePosition - transform.position).normalized;
+        direction.Normalize();
 
         // Instantiate the projectile at the player's position
         GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
@@ -37,4 +37,5 @@ public class PlayerShooting : MonoBehaviour
 
         Destroy(projectile, projectileLifeTime);
     }
+
 }
