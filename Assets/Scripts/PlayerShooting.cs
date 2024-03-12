@@ -12,8 +12,6 @@ public class PlayerShooting : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && Time.time >= nextShotTime) // Right mouse button
         {
-            Debug.Log("Shoot");
-
             ShootProjectile();
             nextShotTime = Time.time + 1f / firerate;
         }

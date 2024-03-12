@@ -31,6 +31,12 @@ public class PlayerHealth : MonoBehaviour
         {
             Destroy(hearts[2].gameObject);
         }
+        {
+            if (dead == true)
+            {
+                Debug.Log("YOU DEDDDD!!!");
+            }
+        }
     }
 
     public void TakeDamage(int d)
@@ -40,7 +46,7 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0)
         {
             dead = true;
-            
+            Destroy(gameObject);
             Destroy(hearts[0].gameObject);
 
             // TODO add death animation, maybe sounds and effects?

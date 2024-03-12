@@ -5,13 +5,13 @@ public class PlayerBullet : MonoBehaviour
     public float projectileSpeed = 10f;  // Speed of the projectile
     public int damage = 10;              // Damage dealt to enemies
     public float lifetime = 3f;          // Lifetime of the projectile
-    
+
     // Cached references
     Rigidbody2D myRigidbody;
 
     private void Awake()
     {
-        myRigidbody = GetComponent<Rigidbody2D>();  
+        myRigidbody = GetComponent<Rigidbody2D>();
     }
 
     void Start()
@@ -28,7 +28,7 @@ public class PlayerBullet : MonoBehaviour
     void FixedUpdate()
     {
         // Move the projectile forward
-       //rb.transform.position += Vector3.right * projectileSpeed * Time.deltaTime;
+        //rb.transform.position += Vector3.right * projectileSpeed * Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -49,3 +49,4 @@ public class PlayerBullet : MonoBehaviour
         }
     }
 }
+

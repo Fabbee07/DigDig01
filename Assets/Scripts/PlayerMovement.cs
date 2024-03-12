@@ -45,8 +45,8 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody.velocity = runVelocity;
 
         // This plays the movement animation
-        if (Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon || Mathf.Abs(myRigidbody.velocity.y) > Mathf.Epsilon) 
-        { 
+        if (Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon || Mathf.Abs(myRigidbody.velocity.y) > Mathf.Epsilon)
+        {
             playerHasSpeed = true;
         }
         else

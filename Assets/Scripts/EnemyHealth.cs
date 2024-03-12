@@ -11,19 +11,19 @@ public class EnemyHealth : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    //void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    // Check if the collided object has the "bullet" tag
-    //    if (other.CompareTag("bullet"))
-    //    {
-    //        // Reduce the enemy's health by the damage of the bullet
-    //        PlayerBullet bullet = other.GetComponent<PlayerBullet>();
-    //        if (bullet != null)
-    //        {
-    //            TakeDamage(bullet.damage);
-    //        }
-    //    }
-    //}
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        // Check if the collided object has the "bullet" tag
+        if (other.CompareTag("bullet"))
+        {
+            // Reduce the enemy's health by the damage of the bullet
+            PlayerBullet bullet = other.GetComponent<PlayerBullet>();
+            if (bullet != null)
+            {
+                TakeDamage(bullet.damage);
+            }
+        }
+    }
 
     public void TakeDamage(int damage)
     {

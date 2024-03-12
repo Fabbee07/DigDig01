@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class AIChase : MonoBehaviour
 {
-    [SerializeField] float speed;
+    public GameObject player;
+    public float speed;
 
-    GameObject player;
 
     // Start is called before the first frame update
     void Start()
