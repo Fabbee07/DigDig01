@@ -44,6 +44,14 @@ public class PlayerMovement : MonoBehaviour
         runVelocity = new Vector2(movementInput.x * moveSpeed, movementInput.y * moveSpeed);
         myRigidbody.velocity = runVelocity;
 
+        float movementDir = myRigidbody.velocity.x;
+        movementDir = Mathf.Sign(movementDir);
+
+        Vector3 playerScale = gameObject.transform.localScale;
+        playerScale.x = movementDir;
+        gameObject.transform.localScale = playerScale;
+
+
         // This plays the movement animation
         if (Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon || Mathf.Abs(myRigidbody.velocity.y) > Mathf.Epsilon)
         {
