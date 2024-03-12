@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     void CheckInput()
     {
         // Get input from arrow keys (or WASD keys)
-        movementInput.x = Input.GetAxisRaw("Horizontal"); // Can be changed to GetAxisRaw for snappier movement
+        movementInput.x = Input.GetAxisRaw("Horizontal"); Debug.Log("is it working"); // Can be changed to GetAxisRaw for snappier movement
         movementInput.y = Input.GetAxisRaw("Vertical");
     }
 
