@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
     private bool dead;
-    
+
     private void Start()
     {
         health = hearts.Length;
@@ -29,7 +29,7 @@ public class PlayerHealth : MonoBehaviour
         }
         else if (health < 3)
         {
-           hearts[2].gameObject.SetActive(false);
+            hearts[2].gameObject.SetActive(false);
         }
         {
             if (dead == true)
