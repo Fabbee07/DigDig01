@@ -114,9 +114,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 157
+        y: 128
         width: 32
-        height: 35
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,9 +135,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 157
+        y: 128
         width: 32
-        height: 35
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,9 +156,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 157
+        y: 128
         width: 32
-        height: 35
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,9 +177,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 157
+        y: 128
         width: 32
-        height: 35
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,9 +198,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 87
+        y: 64
         width: 32
-        height: 35
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,9 +219,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 87
+        y: 64
         width: 32
-        height: 35
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,9 +240,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 87
+        y: 64
         width: 32
-        height: 35
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,9 +261,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 87
+        y: 64
         width: 32
-        height: 35
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,9 +282,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 52
+        y: 0
         width: 32
-        height: 35
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,9 +303,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 52
+        y: 0
         width: 32
-        height: 35
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,48 +315,6 @@ TextureImporter:
       bones: []
       spriteID: a9cd187981cf6084b81c5726bee7a7b9
       internalID: -1041671330
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fire demon orb_10
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 17
-        width: 32
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c79b3feae081684fbbf2581799e6608
-      internalID: 391569044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fire demon orb_11
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 17
-        width: 32
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cddb7c06e8d72be49bd1a5e94e4de78d
-      internalID: 351353539
       vertices: []
       indices: 
       edges: []
@@ -374,8 +332,6 @@ TextureImporter:
     nameFileIdTable:
       Fire demon orb_0: -690132972
       Fire demon orb_1: -1660598584
-      Fire demon orb_10: 391569044
-      Fire demon orb_11: 351353539
       Fire demon orb_2: -823178722
       Fire demon orb_3: -680654086
       Fire demon orb_4: -500352751
