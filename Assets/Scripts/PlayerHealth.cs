@@ -20,16 +20,16 @@ public class PlayerHealth : MonoBehaviour
     {
         if (health < 1)
         {
-            Destroy(hearts[0].gameObject);
+            hearts[0].gameObject.SetActive(false);
         }
 
         else if (health < 2)
         {
-            Destroy(hearts[1].gameObject);
+            hearts[1].gameObject.SetActive(false);
         }
         else if (health < 3)
         {
-            Destroy(hearts[2].gameObject);
+           hearts[2].gameObject.SetActive(false);
         }
         {
             if (dead == true)
@@ -47,7 +47,7 @@ public class PlayerHealth : MonoBehaviour
         {
             dead = true;
             Destroy(gameObject);
-            Destroy(hearts[0].gameObject);
+            hearts[0].gameObject.SetActive(false);
 
             // TODO add death animation, maybe sounds and effects?
             Destroy(gameObject);
