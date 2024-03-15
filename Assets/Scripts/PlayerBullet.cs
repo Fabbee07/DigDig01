@@ -33,7 +33,6 @@ public class PlayerBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
         // Check if the collided object has the "Enemy" tag
         if (collision.gameObject.CompareTag("Enemy"))
         {
