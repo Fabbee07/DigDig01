@@ -12,8 +12,6 @@ public class PlayerShooting : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && Time.time >= nextShotTime) // Right mouse button
         {
-            Debug.Log("Shoot");
-
             ShootProjectile();
             nextShotTime = Time.time + 1f / firerate;
         }
@@ -36,6 +34,7 @@ public class PlayerShooting : MonoBehaviour
         // Get the projectile's Rigidbody2D component and set its velocity
         Rigidbody2D projectileRb = projectile.GetComponent<Rigidbody2D>();
         projectileRb.velocity = direction * projectileSpeed;
+
 
         Destroy(projectile, projectileLifeTime);
     }

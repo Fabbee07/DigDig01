@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 
@@ -24,16 +20,16 @@ public class PlayerHealth : MonoBehaviour
     {
         if (health < 1)
         {
-            Destroy(hearts[0].gameObject);
+            hearts[0].gameObject.SetActive(false);
         }
 
         else if (health < 2)
         {
-            Destroy(hearts[1].gameObject);
+            hearts[1].gameObject.SetActive(false);
         }
         else if (health < 3)
         {
-            Destroy(hearts[3].gameObject);
+            hearts[2].gameObject.SetActive(false);
         }
         {
             if (dead == true)
@@ -46,10 +42,15 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int d)
     {
         health -= d;
+
         if (health <= 0)
         {
             dead = true;
+            Destroy(gameObject);
+            hearts[0].gameObject.SetActive(false);
 
+            // TODO add death animation, maybe sounds and effects?
+            Destroy(gameObject);
         }
     }
 }
