@@ -27,7 +27,6 @@ public class DamageDealer : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("damage");
             playerHealth.TakeDamage(damage);
         }
     }
