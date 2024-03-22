@@ -18,6 +18,15 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (health < 0)
+        {
+            SceneLoader mySceneLoader = gameObject.GetComponent<SceneLoader>();
+            if (mySceneLoader != null)
+            {
+                mySceneLoader.LoadScene("GameOverScene");
+            }
+        }
         if (health < 1)
         {
             hearts[0].gameObject.SetActive(false);
