@@ -278,11 +278,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3406052025968971504, guid: 2049905da702b6246b2144aee3936611, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.85
+      value: 14.41
       objectReference: {fileID: 0}
     - target: {fileID: 3406052025968971504, guid: 2049905da702b6246b2144aee3936611, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.45
+      value: -5.69
       objectReference: {fileID: 0}
     - target: {fileID: 3406052025968971504, guid: 2049905da702b6246b2144aee3936611, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1406,11 +1406,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3406052025968971504, guid: 2049905da702b6246b2144aee3936611, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.92
+      value: 14.41
       objectReference: {fileID: 0}
     - target: {fileID: 3406052025968971504, guid: 2049905da702b6246b2144aee3936611, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.04
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 3406052025968971504, guid: 2049905da702b6246b2144aee3936611, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1472,7 +1472,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRate: 5
   enemyPrefabs:
-  - {fileID: 4026687307186745578, guid: 18cfb2d17de2bfb4794517873c73f474, type: 3}
   - {fileID: 4026687307186745578, guid: 18cfb2d17de2bfb4794517873c73f474, type: 3}
   - {fileID: 4026687307186745578, guid: 18cfb2d17de2bfb4794517873c73f474, type: 3}
   - {fileID: 4026687307186745578, guid: 18cfb2d17de2bfb4794517873c73f474, type: 3}
