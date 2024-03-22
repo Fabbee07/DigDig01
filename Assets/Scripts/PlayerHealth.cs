@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class PlayerHealth : MonoBehaviour
 {
     public int health;
     public GameObject[] hearts;
+    public string GameOverScene;
 
     public Sprite fullHeart;
     public Sprite emptyHeart;
@@ -18,15 +20,16 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (health < 0)
+        if(health < 0)
         {
-            SceneLoader mySceneLoader = gameObject.GetComponent<SceneLoader>();
-            if (mySceneLoader != null)
-            {
-                mySceneLoader.LoadScene("GameOverScene");
-            }
+            SceneManager.LoadScene(GameOverScene);
         }
+
+if (health < 0)
+        {
+            
+        }
+
         if (health < 1)
         {
             hearts[0].gameObject.SetActive(false);

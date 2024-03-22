@@ -5,11 +5,13 @@ public class AIChase : MonoBehaviour
 {
     public GameObject player;
     public float speed;
+    private Rigidbody2D enemyRb;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        enemyRb = GetComponent<Rigidbody2D>();  
         player = FindObjectOfType<PlayerMovement>().gameObject;
     }
 
@@ -23,7 +25,7 @@ public class AIChase : MonoBehaviour
             direction.Normalize();
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+            enemyRb.position = Vector2.MoveTowards(enemyRb.position, player.transform.position, speed * Time.deltaTime);
             //transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.x, Vector3.forward.z * angle));
         }
     }
