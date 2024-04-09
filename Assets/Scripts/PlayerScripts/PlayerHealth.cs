@@ -8,26 +8,15 @@ public class PlayerHealth : MonoBehaviour
     public GameObject[] hearts;
     public string GameOverScene;
 
-    public Sprite fullHeart;
-    public Sprite emptyHeart;
     private bool dead;
 
-    private void Start()
-    {
-        health = hearts.Length;
-    }
-
     // Update is called once per frame
+
     void Update()
     {
-        if(health < 0)
+        if(health <= 0)
         {
             SceneManager.LoadScene(GameOverScene);
-        }
-
-if (health < 0)
-        {
-            
         }
 
         if (health < 1)
@@ -63,6 +52,10 @@ if (health < 0)
 
             // TODO add death animation, maybe sounds and effects?
             Destroy(gameObject);
+
+            SceneManager.LoadScene(GameOverScene);
+
+
         }
     }
 }
