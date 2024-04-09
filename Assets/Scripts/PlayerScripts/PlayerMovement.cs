@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
     void CheckInput()
     {
         // Get input from arrow keys (or WASD keys)
-        movementInput.x = Input.GetAxisRaw("Horizontal");  // Can be changed to GetAxisRaw for snappier movement
+        movementInput.x = Input.GetAxisRaw("Horizontal"); // Can be changed to GetAxisRaw for snappier movement
         movementInput.y = Input.GetAxisRaw("Vertical");
     }
 
@@ -76,10 +76,8 @@ public class PlayerMovement : MonoBehaviour
         // This makes the player move 
         runVelocity = new Vector2(movementInput.x * moveSpeed, movementInput.y * moveSpeed);
         myRigidbody.velocity = runVelocity;
-
         float movementDir = myRigidbody.velocity.x;
         movementDir = Mathf.Sign(movementDir);
-
         Vector3 playerScale = gameObject.transform.localScale;
         playerScale.x = movementDir;
         gameObject.transform.localScale = playerScale;
