@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public abstract class PowerupEffect : ScriptableObject
+public class PowerupEffect : ScriptableObject
 {
-    public abstract void Apply(GameObject target);
+    public virtual void Apply(GameObject target)
+    { }
 }
