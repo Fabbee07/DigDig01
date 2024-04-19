@@ -1,15 +1,29 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public int maxHealth = 3;
+    private int currentHealth = 3;
+
     public int health;
     public GameObject[] hearts;
     public string GameOverScene;
 
     private bool dead;
 
-    // Update is called once per frame
+  
+   public bool IsAtMaxHealth()
+    {
+        return currentHealth >= maxHealth;
+    }
+
+    public void AddHearts(int heartsToadd)
+    {
+        currentHealth = heartsToadd;
+        currentHealth = Mathf.Min(currentHealth, maxHealth);
+    }
 
     void Update()
     {

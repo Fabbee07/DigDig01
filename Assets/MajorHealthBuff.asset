@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bedeb36931f4924ea23712a63a1b323, type: 3}
   m_Name: MajorHealthBuff
   m_EditorClassIdentifier: 
-  amount: 1
+  heartsToAdd: 1
+  amount: 3
