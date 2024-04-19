@@ -22,7 +22,7 @@ public class Powerup : MonoBehaviour
                 }
             }
         
-        Destroy(gameObject); 
+        Destroy(gameObject);  
         powerupEffect.Apply(collision.gameObject);
     }
 }
