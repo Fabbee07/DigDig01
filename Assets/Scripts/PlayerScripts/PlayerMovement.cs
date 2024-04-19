@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D myRigidbody;
     Animator myAnimator;
 
-    public float movespeed;
     public Rigidbody2D rb2d;
     private Vector2 moveInput;
 
@@ -27,26 +26,45 @@ public class PlayerMovement : MonoBehaviour
 
     private float dashCounter;
     private float dashCoolCounter;
+    private bool isDashing;
 
     void Start()
     {
-        activeMoveSpeed = movespeed;
+        activeMoveSpeed = moveSpeed;
     }
 
     void Update()
     {
         CheckInput();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        moveInput.x = Input.GetAxisRaw("Horizontal"); 
+        moveInput.y = Input.GetAxisRaw("Vertical");
+
+        moveInput.Normalize();
+
+        rb2d.velocity = moveInput * activeMoveSpeed;
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            if (dashCoolCounter <= 0 && dashCounter <= 0)
+            dashCoolCounter = 30;
+            isDashing = true;
+        }
+
+        if (isDashing)
+        {
+            activeMoveSpeed = dashSpeed;
+            dashCoolCounter--;
+            if (dashCoolCounter <= 0)
             {
-                activeMoveSpeed = dashSpeed;
-                dashCounter = dashLength;
+                isDashing=false;
             }
         }
-    }
+        else
+        {
+            activeMoveSpeed = moveSpeed;
+        }
 
+    }
 
 
 
