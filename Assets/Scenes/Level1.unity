@@ -2800,6 +2800,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9061557043079479559, guid: bf6fbd058438db046a098b1bd9ee468f, type: 3}
   m_PrefabInstance: {fileID: 2515590659084051812}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1710209524 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 4580611786733834751, guid: bf6fbd058438db046a098b1bd9ee468f, type: 3}
+  m_PrefabInstance: {fileID: 2515590659084051812}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1729414169
 GameObject:
   m_ObjectHideFlags: 0
@@ -3286,6 +3291,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2121742538770300412, guid: bf6fbd058438db046a098b1bd9ee468f, type: 3}
+      propertyPath: rb2d
+      value: 
+      objectReference: {fileID: 1710209524}
+    - target: {fileID: 2121742538770300412, guid: bf6fbd058438db046a098b1bd9ee468f, type: 3}
+      propertyPath: dashSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2121742538770300412, guid: bf6fbd058438db046a098b1bd9ee468f, type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2121742538770300412, guid: bf6fbd058438db046a098b1bd9ee468f, type: 3}
+      propertyPath: movespeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2121742538770300412, guid: bf6fbd058438db046a098b1bd9ee468f, type: 3}
+      propertyPath: dashLength
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2121742538770300412, guid: bf6fbd058438db046a098b1bd9ee468f, type: 3}
+      propertyPath: dashCooldown
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3552200291766209200, guid: bf6fbd058438db046a098b1bd9ee468f, type: 3}
       propertyPath: GameOverScene
       value: GameOverScene
@@ -3329,6 +3358,14 @@ PrefabInstance:
     - target: {fileID: 4580611786733834751, guid: bf6fbd058438db046a098b1bd9ee468f, type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6796528140471207329, guid: bf6fbd058438db046a098b1bd9ee468f, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5672421
+      objectReference: {fileID: 0}
+    - target: {fileID: 6796528140471207329, guid: bf6fbd058438db046a098b1bd9ee468f, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.16594115
       objectReference: {fileID: 0}
     - target: {fileID: 9061557043079479559, guid: bf6fbd058438db046a098b1bd9ee468f, type: 3}
       propertyPath: m_LocalPosition.x
