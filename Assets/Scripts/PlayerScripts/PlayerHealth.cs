@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class PlayerHealth : MonoBehaviour
 {
     public int health;
@@ -38,6 +37,8 @@ public class PlayerHealth : MonoBehaviour
                 Debug.Log("YOU DEDDDD!!!");
             }
         }
+
+
     }
 
     public void TakeDamage(int d)

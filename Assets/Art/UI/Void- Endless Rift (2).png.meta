@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0c84c7e5e5109a148955db8392a238bc
+guid: 598d6708c74da17429a6219c8c40428d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Void- Endless Rift_0
+      name: Void- Endless Rift (2)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9f15d7bf07ab464796af4704dfebf88
-      internalID: -1043616126
+      spriteID: 267e047239dc93c47a2bdf1f1d291278
+      internalID: 1259346203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Void- Endless Rift_1
+      name: Void- Endless Rift (2)_1
       rect:
         serializedVersion: 2
         x: 64
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: feb2b13715c41c44ba1b8eab12b83442
-      internalID: -353709364
+      spriteID: fab90f40871cf5147b3d3b00a824ecdf
+      internalID: -1301301566
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Void- Endless Rift_2
+      name: Void- Endless Rift (2)_2
       rect:
         serializedVersion: 2
         x: 128
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48a745032eeaee345b10e6664ad645f4
-      internalID: 1048026571
+      spriteID: 9d0b04f4d9ac4aa4cafd943fa3e30fed
+      internalID: 210387902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Void- Endless Rift_3
+      name: Void- Endless Rift (2)_3
       rect:
         serializedVersion: 2
         x: 0
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e61509acbf7ab1b4a94cf862e72d4012
-      internalID: -436461943
+      spriteID: 0b6174c37a6864e46bff1daeb4e39a02
+      internalID: -830770318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Void- Endless Rift_4
+      name: Void- Endless Rift (2)_4
       rect:
         serializedVersion: 2
         x: 64
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8443399b4808ef840927032ca20094e7
-      internalID: -2146091114
+      spriteID: d5a9ea80f3b9d024a8b225e7dda204f9
+      internalID: -18818519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Void- Endless Rift_5
+      name: Void- Endless Rift (2)_5
       rect:
         serializedVersion: 2
         x: 128
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26cad0e28ff1de14897e311409351e6d
-      internalID: 1447948810
+      spriteID: d3d7534a062ac9e4eb7b8d67068d2a1a
+      internalID: 1338842175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Void- Endless Rift_6
+      name: Void- Endless Rift (2)_6
       rect:
         serializedVersion: 2
         x: 0
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68c2fd8cea0bcc64d9b013e714d46a41
-      internalID: 569455768
+      spriteID: 2f41ab15c6e88124c8a97499d8b413f7
+      internalID: -280404105
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Void- Endless Rift_7
+      name: Void- Endless Rift (2)_7
       rect:
         serializedVersion: 2
         x: 64
@@ -271,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38d790b2ea6d00b418382a4fde3bdbf5
-      internalID: -1312178039
+      spriteID: 626428211f372534d9224fa6ad0ae380
+      internalID: 2118231532
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Void- Endless Rift_8
+      name: Void- Endless Rift (2)_8
       rect:
         serializedVersion: 2
         x: 128
@@ -292,14 +292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6d4d31a565396446be7ddb9a21197c1
-      internalID: 329593330
+      spriteID: 226804e70bb335e459f55095e67be191
+      internalID: 1110074821
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Void- Endless Rift_9
+      name: Void- Endless Rift (2)_9
       rect:
         serializedVersion: 2
         x: 0
@@ -313,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6a1f68c3b3aca444a643b47ed77cd79
-      internalID: 453288507
+      spriteID: d42265fb9d842ce4784dc0d0bd53041a
+      internalID: -534245296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Void- Endless Rift_10
+      name: Void- Endless Rift (2)_10
       rect:
         serializedVersion: 2
         x: 64
@@ -334,8 +334,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e2a0df6ba10f2f4493ac3ac46543dc5
-      internalID: 423544172
+      spriteID: 41e2ec522e65f7d40ba1cc8f62e0da97
+      internalID: 879142304
       vertices: []
       indices: 
       edges: []
@@ -351,17 +351,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Void- Endless Rift_0: -1043616126
-      Void- Endless Rift_1: -353709364
-      Void- Endless Rift_10: 423544172
-      Void- Endless Rift_2: 1048026571
-      Void- Endless Rift_3: -436461943
-      Void- Endless Rift_4: -2146091114
-      Void- Endless Rift_5: 1447948810
-      Void- Endless Rift_6: 569455768
-      Void- Endless Rift_7: -1312178039
-      Void- Endless Rift_8: 329593330
-      Void- Endless Rift_9: 453288507
+      Void- Endless Rift (2)_0: 1259346203
+      Void- Endless Rift (2)_1: -1301301566
+      Void- Endless Rift (2)_10: 879142304
+      Void- Endless Rift (2)_2: 210387902
+      Void- Endless Rift (2)_3: -830770318
+      Void- Endless Rift (2)_4: -18818519
+      Void- Endless Rift (2)_5: 1338842175
+      Void- Endless Rift (2)_6: -280404105
+      Void- Endless Rift (2)_7: 2118231532
+      Void- Endless Rift (2)_8: 1110074821
+      Void- Endless Rift (2)_9: -534245296
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
