@@ -2,7 +2,6 @@ using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 3;
@@ -52,6 +51,8 @@ public class PlayerHealth : MonoBehaviour
                 Debug.Log("YOU DEDDDD!!!");
             }
         }
+
+
     }
 
     public void TakeDamage(int d)
