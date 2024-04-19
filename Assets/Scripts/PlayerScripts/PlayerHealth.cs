@@ -52,7 +52,6 @@ public class PlayerHealth : MonoBehaviour
                 Debug.Log("YOU DEDDDD!!!");
             }
         }
-        Debug.Log(health);
     }
 
     public void TakeDamage(int d)

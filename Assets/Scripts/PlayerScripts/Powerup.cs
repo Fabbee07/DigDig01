@@ -9,7 +9,7 @@ public class Powerup : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
             PlayerHealth playerHealth = null;
-            if (collision.CompareTag("player"))
+            if (collision.CompareTag("Player"))
             {
                 playerHealth = collision.GetComponent<PlayerHealth>();
             }
