@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4087138772214849315}
   - component: {fileID: 7344342325404427489}
   m_Layer: 0
-  m_Name: SlimeBullet
+  m_Name: RangedEnemyProjectile
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
