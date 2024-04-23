@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 7959101900882663615}
   - component: {fileID: -5483526188415000122}
   - component: {fileID: 4087138772214849315}
+  - component: {fileID: 7344342325404427489}
   m_Layer: 0
   m_Name: SlimeBullet
-  m_TagString: Untagged
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,3 +159,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1021487, y: 0.10574965}
   m_EdgeRadius: 0
+--- !u!114 &7344342325404427489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6790579498677750919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf260779a6002ca49b9212053e977e4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  damage: 1
