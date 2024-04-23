@@ -3536,6 +3536,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 965222379067450329, guid: bf6fbd058438db046a098b1bd9ee468f, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 898071827787490012, guid: c1319a482e77f8a4e89099fa53208d71, type: 3}
     - target: {fileID: 2121742538770300412, guid: bf6fbd058438db046a098b1bd9ee468f, type: 3}
       propertyPath: rb2d
       value: 
