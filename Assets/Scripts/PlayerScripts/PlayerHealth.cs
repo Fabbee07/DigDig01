@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 3;
     private int currentHealth = 3;
+    private bool isinvincible = false;
 
     public int health;
     public GameObject[] hearts;
@@ -13,8 +15,8 @@ public class PlayerHealth : MonoBehaviour
 
     private bool dead;
 
-  
-   public bool IsAtMaxHealth()
+
+    public bool IsAtMaxHealth()
     {
         return currentHealth >= maxHealth;
     }

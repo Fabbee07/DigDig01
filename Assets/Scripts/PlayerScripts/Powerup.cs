@@ -21,8 +21,8 @@ public class Powerup : MonoBehaviour
                     playerHealth.AddHearts(powerupEffect.heartsToAdd);
                 }
             }
-        
-        Destroy(gameObject);  
+
+        Destroy(gameObject);
         powerupEffect.Apply(collision.gameObject);
     }
 }
