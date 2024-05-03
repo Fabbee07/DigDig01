@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
+    Animator myAnimator;
+
     public int maxHealth = 3;
     private int currentHealth = 3;
     private bool isinvincible = false;
@@ -14,7 +16,13 @@ public class PlayerHealth : MonoBehaviour
     public string GameOverScene;
 
     private bool dead;
+    bool playerIsDead;
 
+
+    private void Awake()
+    {
+        myAnimator = GetComponentInChildren<Animator>();
+    }
 
     public bool IsAtMaxHealth()
     {
@@ -47,14 +55,6 @@ public class PlayerHealth : MonoBehaviour
         {
             hearts[2].gameObject.SetActive(false);
         }
-        {
-            if (dead == true)
-            {
-                Debug.Log("YOU DEDDDD!!!");
-            }
-        }
-
-
     }
 
     public void TakeDamage(int d)
@@ -66,8 +66,17 @@ public class PlayerHealth : MonoBehaviour
             dead = true;
             Destroy(gameObject);
             hearts[0].gameObject.SetActive(false);
+            {
+                playerIsDead= true;
+            }
 
             // TODO add death animation, maybe sounds and effects?
+
+            if (dead == true)
+            {
+                myAnimator.SetBool("IsDead", playerIsDead);
+            }
+
             Destroy(gameObject);
 
             SceneManager.LoadScene(GameOverScene);

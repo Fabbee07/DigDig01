@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
         rb2d.velocity = moveInput * activeMoveSpeed;
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift)&&(dashCoolCounter<=0))//tryck shift och OM du har cooldown=0 då får du dasha
         {
             dashCoolCounter = 30;
             isDashing = true;
