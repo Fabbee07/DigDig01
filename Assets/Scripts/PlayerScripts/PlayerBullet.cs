@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
 {
-    public float projectileSpeed = 10f;  // Speed of the projectile
     public int damage = 10;              // Damage dealt to enemies
     public float lifetime = 3f;          // Lifetime of the projectile
 
@@ -25,16 +24,8 @@ public class PlayerBullet : MonoBehaviour
         transform.right = myRigidbody.velocity;
     }
 
-    void FixedUpdate()
-    {
-        // Move the projectile forward
-        //rb.transform.position += Vector3.right * projectileSpeed * Time.deltaTime;
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Player bullet hit enemy");
-
         // Check if the collided object has the "Enemy" tag    
         if (collision.gameObject.CompareTag("Enemy"))
         {
@@ -50,4 +41,3 @@ public class PlayerBullet : MonoBehaviour
         }
     }
 }
-

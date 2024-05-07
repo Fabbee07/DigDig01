@@ -14,8 +14,6 @@ public class PlayerHealth : MonoBehaviour
     public string GameOverScene;
 
     private bool dead;
-    bool playerIsDead;
-
 
     private void Awake()
     {
@@ -42,16 +40,16 @@ public class PlayerHealth : MonoBehaviour
 
         if (health < 1)
         {
-            hearts[0].gameObject.SetActive(false);
+            hearts[0].SetActive(false);
         }
 
         else if (health < 2)
         {
-            hearts[1].gameObject.SetActive(false);
+            hearts[1].SetActive(false);
         }
         else if (health < 3)
         {
-            hearts[2].gameObject.SetActive(false);
+            hearts[2].SetActive(false);
         }
     }
 
@@ -63,17 +61,9 @@ public class PlayerHealth : MonoBehaviour
         {
             dead = true;
             Destroy(gameObject);
-            hearts[0].gameObject.SetActive(false);
-            {
-                playerIsDead= true;
-            }
+            hearts[0].SetActive(false);
 
-            // TODO add death animation, maybe sounds and effects?
-
-            if (dead == true)
-            {
-                myAnimator.SetBool("IsDead", playerIsDead);
-            }
+            myAnimator.SetTrigger("IsDead");
 
             Destroy(gameObject);
 

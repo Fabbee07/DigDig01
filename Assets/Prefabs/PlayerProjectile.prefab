@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4699591197636020729}
   - component: {fileID: -7771147195711346014}
   - component: {fileID: 2255961767633532085}
-  - component: {fileID: 3202663763398507504}
+  - component: {fileID: -5644065064783394934}
   m_Layer: 0
   m_Name: PlayerProjectile
   m_TagString: Untagged
@@ -171,7 +171,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3202663763398507504
+--- !u!114 &-5644065064783394934
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,4 +185,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 10
   damage: 1
-  lifetime: 3
+  lifetime: 5
