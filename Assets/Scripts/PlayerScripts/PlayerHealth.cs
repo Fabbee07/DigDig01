@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,7 +13,6 @@ public class PlayerHealth : MonoBehaviour
     public int health;
     public GameObject[] hearts;
     public string GameOverScene;
-
     private bool dead;
 
     private void Awake()
@@ -31,12 +31,15 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = Mathf.Min(currentHealth, maxHealth);
     }
 
+
     void Update()
     {
-        if(health <= 0)
-        {
-            SceneManager.LoadScene(GameOverScene);
-        }
+    }
+
+    public void TakeDamage(int d)
+    {
+        health -= d;
+
 
         if (health < 1)
         {
@@ -51,25 +54,28 @@ public class PlayerHealth : MonoBehaviour
         {
             hearts[2].SetActive(false);
         }
-    }
 
-    public void TakeDamage(int d)
-    {
-        health -= d;
 
         if (health <= 0)
         {
             dead = true;
-            Destroy(gameObject);
+            //Destroy(gameObject);
             hearts[0].SetActive(false);
+
+            PlayerMovement hej = GetComponent<PlayerMovement>();
+            hej.isDead = true;
 
             myAnimator.SetTrigger("IsDead");
 
-            Destroy(gameObject);
-
-            SceneManager.LoadScene(GameOverScene);
-
+            StartCoroutine("PlayerDies");
 
         }
+    }
+
+    IEnumerator PlayerDies()
+    {
+        Debug.Log("This happens! first");
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(GameOverScene);
     }
 }
