@@ -69,7 +69,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11395013, y: -0.18232}
+  m_Offset: {x: 0.11395013, y: -0.16594115}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -80,7 +80,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.6}
+  m_Size: {x: 1, y: 1.5672421}
   m_EdgeRadius: 0
 --- !u!50 &4580611786733834751
 Rigidbody2D:
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b728d7cc7e717549ad4e0d8aad8ba21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 1770845793907076394, guid: 26613d74e5e128c41becf712d0855d15, type: 3}
+  projectilePrefab: {fileID: 898071827787490012, guid: c1319a482e77f8a4e89099fa53208d71, type: 3}
   projectileSpeed: 10
   projectileLifeTime: 5
   firerate: 5
@@ -138,13 +138,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d3f5660f0847244922ae14865762ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 3
   health: 3
   hearts:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  fullHeart: {fileID: -826519463, guid: 8d30252328dd5fc45b36829dd2988309, type: 3}
-  emptyHeart: {fileID: 932627925, guid: 33a6c7d15aa78f645824fcf8922ca832, type: 3}
+  GameOverScene: GameOverScene
 --- !u!114 &2121742538770300412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,6 +158,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  rb2d: {fileID: 4580611786733834751}
+  dashSpeed: 20
+  dashLength: 25
+  dashCooldown: 10
 --- !u!1 &3818699730996125598
 GameObject:
   m_ObjectHideFlags: 0

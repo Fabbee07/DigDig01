@@ -15,9 +15,7 @@ public class RangedEnemy : MonoBehaviour
     {
         // Check if the player is within shooting range
         if (Vector2.Distance(transform.position, player.position) <= shootingRange)
-        {
-            // Face the player
-         
+        {         
 
             // Shoot at the player
             Shoot();

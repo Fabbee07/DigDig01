@@ -11,9 +11,10 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movementInput;
     Vector2 runVelocity;
     bool playerHasSpeed;
+    public bool isDead=false;
 
     // Cached references
-    Rigidbody2D myRigidbody;
+    public Rigidbody2D myRigidbody;
     Animator myAnimator;
 
     public Rigidbody2D rb2d;
@@ -24,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
 
     public float dashLength = .5f, dashCooldown = 1f;
 
-    private float dashCounter;
     private float dashCoolCounter;
     private bool isDashing;
 
@@ -36,9 +36,11 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         CheckInput();
-
-        moveInput.x = Input.GetAxisRaw("Horizontal"); 
-        moveInput.y = Input.GetAxisRaw("Vertical");
+        if (!isDead)
+        {
+            moveInput.x = Input.GetAxisRaw("Horizontal");
+            moveInput.y = Input.GetAxisRaw("Vertical");
+        }
 
         moveInput.Normalize();
 
@@ -48,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
         {
             dashCoolCounter = 30;
             isDashing = true;
+            myAnimator.SetTrigger("IsDashing");
         }
 
         if (isDashing)
@@ -63,8 +66,9 @@ public class PlayerMovement : MonoBehaviour
         {
             activeMoveSpeed = moveSpeed;
         }
-
+ 
     }
+
 
 
 
@@ -78,13 +82,20 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        Movement();
+        if (!isDead)
+        {
+            Movement();
+        }
+        else
+        {
+            Debug.Log("u dead mow");
+        }
     }
 
     void CheckInput()
     {
         // Get input from arrow keys (or WASD keys)
-        movementInput.x = Input.GetAxisRaw("Horizontal"); // Can be changed to GetAxisRaw for snappier movement
+        movementInput.x = Input.GetAxisRaw("Horizontal"); // Can be changed to GetAxisRaw for snappier movement 
         movementInput.y = Input.GetAxisRaw("Vertical");
     }
 
