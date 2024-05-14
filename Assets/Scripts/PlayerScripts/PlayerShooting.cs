@@ -6,13 +6,21 @@ public class PlayerShooting : MonoBehaviour
     public float projectileSpeed = 10f;  // Speed of the projectile
     public float firerate = 0.2f;
     public float nextShotTime;
+    private Animator myAnimator;
 
+    private void Awake()
+    {
+        myAnimator = GetComponentInChildren<Animator>();
+    }
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && Time.time >= nextShotTime) // Right mouse button
         {
             ShootProjectile();
             nextShotTime = Time.time + 1f / firerate;
+
+            myAnimator.SetTrigger("IsShooting");
+
         }
     }
 
