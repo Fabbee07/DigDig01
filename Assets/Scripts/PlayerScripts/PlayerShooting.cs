@@ -7,6 +7,7 @@ public class PlayerShooting : MonoBehaviour
     public float firerate = 0.2f;
     public float nextShotTime;
     private Animator myAnimator;
+    public bool isDead=false;
 
     private void Awake()
     {
@@ -14,14 +15,24 @@ public class PlayerShooting : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && Time.time >= nextShotTime) // Right mouse button
-        {
-            ShootProjectile();
-            nextShotTime = Time.time + 1f / firerate;
+      
 
-            myAnimator.SetTrigger("IsShooting");
+            if (!isDead)
+            {
+            if (Input.GetMouseButtonDown(0) && Time.time >= nextShotTime) // Right mouse button
+            {
+                ShootProjectile();
+                nextShotTime = Time.time + 1f / firerate;
 
+                myAnimator.SetTrigger("IsShooting");
+            }
         }
+        
+    }
+
+    private void FixedUpdate()
+    {
+        
     }
 
     void ShootProjectile()
