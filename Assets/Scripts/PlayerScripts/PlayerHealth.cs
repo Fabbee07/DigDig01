@@ -65,6 +65,9 @@ public class PlayerHealth : MonoBehaviour
             PlayerMovement hej = GetComponent<PlayerMovement>();
             hej.isDead = true;
 
+            PlayerShooting hejdå = GetComponent<PlayerShooting>();
+            hejdå.isDead = true;
+
             myAnimator.SetTrigger("IsDead");
 
             StartCoroutine("PlayerDies");

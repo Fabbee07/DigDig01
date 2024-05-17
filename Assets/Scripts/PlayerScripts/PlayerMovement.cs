@@ -66,19 +66,13 @@ public class PlayerMovement : MonoBehaviour
         {
             activeMoveSpeed = moveSpeed;
         }
- 
     }
-
-
-
 
     void Awake()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponentInChildren<Animator>();
     }
-
-   
 
     void FixedUpdate()
     {
