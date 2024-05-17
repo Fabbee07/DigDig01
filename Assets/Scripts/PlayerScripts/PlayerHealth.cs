@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
 
     public int maxHealth = 3;
     private int currentHealth = 3;
+    private bool isinvincible = false;
 
     public int health;
     public GameObject[] hearts;
