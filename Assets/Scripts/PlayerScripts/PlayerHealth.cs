@@ -32,11 +32,6 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = Mathf.Min(currentHealth, maxHealth);
     }
 
-
-    void Update()
-    {
-    }
-
     public void TakeDamage(int d)
     {
         health -= d;
